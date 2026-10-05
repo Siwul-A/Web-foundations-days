@@ -31,7 +31,7 @@ function getSummary(){
     .join(", ");
     return `${total} ${label}: ${details}.`;
 }
-function isDublicate(text){
+function isDuplicate(text){
     const cleanInput = text.trim().toLowerCase();
     return notes.some((note) => note.text.trim().toLowerCase() === cleanInput);  
 }
@@ -86,5 +86,3 @@ console.log(addNote("Practice coding daily", "study"));
 console.log(addNote("Call mum", "personal")); 
 console.log(addNote("Go to gym", "fitness")); 
 console.log(addNote("   ", "personal")); 
-// Add this before line 10 in script.js
-console.log('Value of note:', note, 'Type:', typeof note);
