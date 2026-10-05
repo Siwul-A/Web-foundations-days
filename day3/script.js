@@ -6,9 +6,9 @@ let notes=[
     {id:5, text: "Call mum", category: "personal"}
 ]
 function searchNotes(word){
-    const searchItem= word.toLowerCase();
-     return notes.filter((note) => note.toLowerCase().includes(searchItem));
-}
+    const searchItem = word.toLowerCase();
+        return notes.filter((note) => note.text.toLowerCase().includes(searchItem));
+};
 function longestNote(){
     if(notes.length===0) {return null;}
     return  notes.reduce((longest, current) => {
@@ -22,7 +22,7 @@ function countByCategory(){
         counts[cat] = (counts[cat] || 0) +1;
     } return counts;
 }
-function getSummery(){
+function getSummary(){
     const total = notes.length;
     const label = total === 1 ? "note" : "notes";
     const counts = countByCategory();
@@ -86,3 +86,5 @@ console.log(addNote("Practice coding daily", "study"));
 console.log(addNote("Call mum", "personal")); 
 console.log(addNote("Go to gym", "fitness")); 
 console.log(addNote("   ", "personal")); 
+// Add this before line 10 in script.js
+console.log('Value of note:', note, 'Type:', typeof note);
